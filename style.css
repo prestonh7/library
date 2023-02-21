@@ -22,8 +22,7 @@ body {
 .header {
     background-color: var(--dark-primary);
     color: var(--text);
-}
-
-.header h1 {
-    margin-left: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
