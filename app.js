@@ -24,7 +24,8 @@ function updateList() {
       const title = document.createElement("h3");
       const author = document.createElement("p");
       const pages = document.createElement("p");
-      const read = document.createElement("button");
+      const read = document.createElement("input");
+      read.setAttribute("type", "checkbox");
       const remove = document.createElement("button");
   
       // set the text content of the elements
