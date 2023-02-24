@@ -36,6 +36,19 @@ body {
     align-items: center;
     overflow-x: auto;
     overflow-y: hidden;
+    margin-left: 1em;
+}
+
+.container li {
+    background: var(--dark-primary);
+    color: var(--text);
+    padding: 1em;
+    border-color: var(--dark-primary);
+    border-radius: 1em;
+}
+
+li {
+    list-style-type: none;
 }
 
 @media (max-width: 600px) {
