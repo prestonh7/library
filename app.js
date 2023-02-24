@@ -32,7 +32,7 @@ function updateList() {
       title.textContent = book.title;
       author.textContent = book.author;
       pages.textContent = book.pages;
-      read.textContent = book.read ? "Read" : "Not read";
+      read.checked = book.read;
       remove.textContent = "Remove";
   
       // add event listeners to the buttons
@@ -57,9 +57,9 @@ function updateList() {
     });
   }
 
-let berserk = new Book("Berserk", "Kentaro Miura", "~700", "yes");
+let berserk = new Book("Berserk", "Kentaro Miura", "~700", true);
 
-let naruto = new Book("Naruto", "Masashi Kishimoto", "192", "no")
+let naruto = new Book("Naruto", "Masashi Kishimoto", "192", false);
 
 addBookToLibrary(berserk);
 addBookToLibrary(naruto);
