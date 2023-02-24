@@ -9,10 +9,10 @@ class Book {
         this.pages = pages;
         this.read = read;
     }
-}
 
-function addBookToLibrary(book) {
-    myLibrary.push(book);
+    addBookToLibrary() {
+      myLibrary.push(this);
+    }
 }
 
 function updateList() {
@@ -60,7 +60,7 @@ let berserk = new Book("Berserk", "Kentaro Miura", "~700", true);
 
 let naruto = new Book("Naruto", "Masashi Kishimoto", "192", false);
 
-addBookToLibrary(berserk);
-addBookToLibrary(naruto);
+berserk.addBookToLibrary();
+naruto.addBookToLibrary();
 
 updateList();
