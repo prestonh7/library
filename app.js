@@ -37,8 +37,7 @@ function updateList() {
   
       // add event listeners to the buttons
       read.addEventListener("click", () => {
-        toggleRead(index);
-        updateList();
+        book.read = read.checked;
       });
       remove.addEventListener("click", () => {
         removeBook(index);
