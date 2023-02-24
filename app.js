@@ -16,8 +16,8 @@ function addBookToLibrary(book) {
 }
 
 function updateList() {
-    const bookList = document.getElementById("book-list");
-    bookList.innerText = ""; // clear the current list
+    const container = document.querySelector(".container");
+    container.innerText = ""; // clear the current list
   
     myLibrary.forEach((book, index) => {
       const li = document.createElement("li");
@@ -52,7 +52,7 @@ function updateList() {
       li.appendChild(remove);
   
       // append the li element to the ul element
-      bookList.appendChild(li);
+      container.appendChild(li);
     });
   }
 
