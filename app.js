@@ -2,10 +2,11 @@ let myLibrary = [];
 
 const addBookBtn = document.querySelector(".addBookBtn");
 const content = document.querySelector(".content");
+const popup = document.querySelector('#popup');
 
 //Display form
 addBookBtn.addEventListener("click", () => {
-  addBookForm.classList.toggle('hidden');
+  popup.classList.toggle('open');
 });
 
 //Take form values and creates book

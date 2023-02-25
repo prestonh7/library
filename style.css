@@ -43,13 +43,22 @@ body {
     background-color: var(--dark-text);
 }
 
-.hidden {
-    display: none;
-}
-
 #addBookForm {
     background: var(--dark-primary);
     color: var(--text);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.popup.open {
+    display: block;
 }
 
 .container {
@@ -64,6 +73,7 @@ body {
     margin-left: 1em;
 }
 
+/* Book items */
 .container li {
     background: var(--dark-primary);
     color: var(--text);
@@ -77,6 +87,7 @@ li {
     list-style-type: none;
 }
 
+/* X button styles */
 .container li button {
     position: absolute;
     top: 10%;
@@ -89,6 +100,8 @@ li {
     font-size: large;
 }
 
+
+/* Hover Animations */
 li button:hover {
     animation: spin .2s linear;
 }
