@@ -20,7 +20,7 @@ form.addEventListener('submit', (e) => {
   const book = new Book(title, author, pages, read);
   book.addBookToLibrary();
   form.reset();
-  form.classList.add('hidden');
+  popup.classList.toggle('open');
 });
 
 class Book {
