@@ -38,7 +38,7 @@ function updateList() {
       pages.textContent = book.pages;
       readText.textContent = "Read: "
       read.checked = book.read;
-      remove.textContent = "Remove";
+      remove.textContent = "X";
   
       // add event listeners to the buttons
       read.addEventListener("click", () => {

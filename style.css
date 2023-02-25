@@ -45,10 +45,17 @@ body {
     padding: 1em;
     border-radius: 1em;
     text-align: center;
+    position: relative;
 }
 
 li {
     list-style-type: none;
+}
+
+.container li button {
+    position: absolute;
+    top: 10%;
+    left: 80%;
 }
 
 @media (max-width: 600px) {
