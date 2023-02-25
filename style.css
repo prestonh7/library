@@ -27,6 +27,21 @@ body {
     justify-content: space-around;
 }
 
+.header button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--text);
+    color: var(--dark-primary);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+    background-color: var(--dark-text);
+}
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
