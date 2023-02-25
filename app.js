@@ -1,5 +1,12 @@
 let myLibrary = [];
 
+const createBook = document.querySelector(".addBook");
+const content = document.querySelector(".content");
+
+createBook.addEventListener("click", () => {
+  addBook();
+});
+
 class Book {
     constructor(title, author, pages, read) {
         this.title = title;
@@ -59,7 +66,11 @@ function updateList() {
       // append the li element to the ul element
       container.appendChild(li);
     });
-  }
+}
+
+function addBook() {
+
+}
 
 let berserk = new Book("Berserk", "Kentaro Miura", "~700", true);
 
