@@ -1,10 +1,25 @@
 let myLibrary = [];
 
-const createBook = document.querySelector(".addBook");
+const addBookBtn = document.querySelector(".addBookBtn");
 const content = document.querySelector(".content");
 
-createBook.addEventListener("click", () => {
-  addBook();
+//Display form
+addBookBtn.addEventListener("click", () => {
+  addBookForm.classList.toggle('hidden');
+});
+
+//Take form values and creates book
+const form = document.querySelector('#addBookForm');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const title = form.querySelector('#title').value;
+  const author = form.querySelector('#author').value;
+  const pages = form.querySelector('#pages').value;
+  const read = form.querySelector('#read').checked;
+  const book = new Book(title, author, pages, read);
+  book.addBookToLibrary();
+  form.reset();
+  form.classList.add('hidden');
 });
 
 class Book {
@@ -17,6 +32,7 @@ class Book {
 
     addBookToLibrary() {
       myLibrary.push(this);
+      updateList();
     }
 
     removeBook(book) {
@@ -66,10 +82,6 @@ function updateList() {
       // append the li element to the ul element
       container.appendChild(li);
     });
-}
-
-function addBook() {
-
 }
 
 let berserk = new Book("Berserk", "Kentaro Miura", "~700", true);
