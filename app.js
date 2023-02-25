@@ -27,6 +27,7 @@ function updateList() {
       const title = document.createElement("h3");
       const author = document.createElement("p");
       const pages = document.createElement("p");
+      const readText = document.createElement("span");
       const read = document.createElement("input");
       read.setAttribute("type", "checkbox");
       const remove = document.createElement("button");
@@ -35,6 +36,7 @@ function updateList() {
       title.textContent = book.title;
       author.textContent = book.author;
       pages.textContent = book.pages;
+      readText.textContent = "Read: "
       read.checked = book.read;
       remove.textContent = "Remove";
   
@@ -50,6 +52,7 @@ function updateList() {
       li.appendChild(title);
       li.appendChild(author);
       li.appendChild(pages);
+      li.appendChild(readText);
       li.appendChild(read);
       li.appendChild(remove);
   
