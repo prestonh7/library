@@ -47,6 +47,11 @@ body {
     display: none;
 }
 
+#addBookForm {
+    background: var(--dark-primary);
+    color: var(--text);
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
