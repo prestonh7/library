@@ -11,6 +11,11 @@ class Book {
     addBookToLibrary() {
       myLibrary.push(this);
     }
+
+    removeBook(book) {
+      myLibrary.splice(book);
+      updateList();
+    }
 }
 
 function updateList() {
@@ -38,8 +43,7 @@ function updateList() {
         book.read = read.checked;
       });
       remove.addEventListener("click", () => {
-        removeBook(index);
-        updateList();
+        myLibrary[index].removeBook(index);
       });
   
       // append the elements to the li element
